@@ -8,7 +8,7 @@
 
 > ⚠️ Notes, comments and documentation are written in Spanish as part of my university coursework.
 
-Collection of exercises and projects from my Data Transmission & Communications course at UANL, built and simulated using Cisco Packet Tracer.
+Collection of exercises and projects from my Data Transmission & Communications and Lab courses at UANL, built and simulated using Cisco Packet Tracer.
 
 </div>
 
