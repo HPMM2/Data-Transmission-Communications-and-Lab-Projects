@@ -1,0 +1,124 @@
+!
+version 15.1
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+service password-encryption
+!
+hostname ED1
+!
+!
+!
+enable secret 5 $1$mERr$hx5rVt7rPNoS4wqbXKX7m0
+enable password 7 08006E6D
+!
+!
+!
+!
+!
+!
+no ip cef
+ipv6 unicast-routing
+!
+no ipv6 cef
+!
+!
+!
+username US1 privilege 15 secret 5 $1$mERr$hx5rVt7rPNoS4wqbXKX7m0
+!
+!
+license udi pid CISCO2911/K9 sn FTX15247YGB-
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+spanning-tree mode pvst
+!
+!
+!
+!
+!
+!
+interface Loopback0
+ ip address 1.1.1.1 255.255.255.255
+!
+interface GigabitEthernet0/0
+ description Conecta a Sistemas
+ ip address 200.34.15.161 255.255.255.248
+ ip ospf 1 area 0
+ duplex auto
+ speed auto
+ ipv6 address 2001:ABC:D200:4::/64
+ ipv6 enable
+ ipv6 ospf 1 area 0
+!
+interface GigabitEthernet0/1
+ description Conecta a Compras
+ ip address 200.34.14.1 255.255.255.0
+ ip ospf 1 area 0
+ duplex auto
+ speed auto
+ ipv6 address 2001:ABC:D200::/64
+ ipv6 enable
+ ipv6 ospf 1 area 0
+!
+interface GigabitEthernet0/2
+ description Conecta a ED3
+ ip address 200.34.15.173 255.255.255.252
+ duplex auto
+ speed auto
+ ipv6 address 2001:ABC:D200:6::/64
+!
+interface GigabitEthernet0/0/0
+ description Conecta a ED2
+ ip address 200.34.15.169 255.255.255.252
+ ip ospf 1 area 0
+ ipv6 address 2001:ABC:D200:5::/64
+ ipv6 enable
+ ipv6 ospf 1 area 0
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+router ospf 1
+ log-adjacency-changes
+!
+ipv6 router ospf 1
+ log-adjacency-changes
+!
+ip classless
+!
+ip flow-export version 9
+!
+!
+!
+banner motd #Unauthorized access is strictly prohibited#
+!
+!
+!
+!
+line con 0
+ exec-timeout 5 0
+ logging synchronous
+ login local
+!
+line aux 0
+!
+line vty 0 4
+ login local
+ transport input telnet
+line vty 5 15
+ login local
+ transport input telnet
+!
+!
+!
+end
+
