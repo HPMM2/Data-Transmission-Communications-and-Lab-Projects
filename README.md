@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🌐 Data Transmission & Communications — UANL
+# 🌐 Data Transmission & Communications and Lab — UANL
 ![Cisco](https://img.shields.io/badge/Cisco-white?style=flat&logo=cisco&logoColor=white&labelColor=00bcd4&color=0097a7)
 ![Packet Tracer](https://img.shields.io/badge/Packet%20Tracer-white?style=flat&logoColor=white&labelColor=00bcd4&color=0097a7)
 ![UANL](https://img.shields.io/badge/UANL-white?style=flat&logoColor=white&labelColor=00bcd4&color=0097a7)
